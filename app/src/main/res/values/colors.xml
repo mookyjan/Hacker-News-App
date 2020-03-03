@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FED32D</color>
+    <color name="colorPrimaryDark">#EBBB05</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorGreyPrimary">#f2f4fc</color>
+    <color name="colorGreySecondary">#b5c4e5</color>
+    <color name="colorGreyLight">#b5c4e4</color>
+    <color name="colorGreyDark">#808DA7</color>
+    <color name="colorGreyDarker">#334264</color>
+
+    <color name="light_gray">#80dadada</color>
+    <color name="dark_gray">#80a39f9f</color>
+
+    <!--generic colors-->
+    <color name="white">#ffffff</color>
+    <color name="white50">#80ffffff</color>
+    <color name="black">#000000</color>
+    <color name="colorBackground">#F1F3FB</color>
+    <color name="colorBackground40">#F4F5FB</color>
+    <color name="colorGrey">#A1A1A1</color>
+    <color name="colorDarkBlue">#2D86AD</color>
+    <color name="colorDarkerBlue">#1b6291</color>
+
+    <color name="background">#dddddd</color>
+
+    <!--Text colors-->
+    <color name="textColor">#0D426D</color>
+    <color name="textColorDark">@color/colorGreyDark</color>
+    <color name="hyperlinkRedColor">#a60c2e</color>
+    <color name="disable_color">#C5D5E2</color>
+    <color name="enable_color">@color/colorPrimary</color>
+    <color name="pinTextColor">#808DA7</color>
+
+    <color name="colorOrange">#fd7a30</color>
+    <color name="colorRed">#ea3546</color>
+    <color name="colorLighterRed">#EF5350</color>
+    <color name="colorBlue">#4d86fc</color>
+    <color name="colorGreen">#24dd67</color>
+    <color name="emailGreen">#39BB80</color>
+    <color name="colorYellow">#FED32D</color>
+
+    <color name="colorLightYellow">#F0E3B0</color>
+    <color name="colorDarkYellow">#EBBB05</color>
+    <!--shadows-->
+    <color name="first_shadow">#00CCCCCC</color>
+    <color name="second_shadow">#10CCCCCC</color>
+    <color name="third_shadow">#20CCCCCC</color>
+    <color name="fourth_shadow">#30CCCCCC</color>
+    <color name="fifth_shadow">#50CCCCCC</color>
+    <color name="colorDisabled">#F5F5F5</color>
+
+    <color name="void_disable">#9FB3C4</color>
+    <color name="grey">#888888</color>
+
+    <!--pin lock view-->
+    <color name="purple_dark">@color/colorPrimaryDark</color>
+    <color name="greyish">#aaa8a8</color>
+
+    <!--Grey-->
+    <color name="grey_light">@color/colorGreyPrimary</color>
+    <color name="grey_light_medium">@color/colorGreySecondary</color>
+    <color name="grey_medium">#808DA8</color>
+    <color name="grey_dark">@color/colorGreyDarker</color>
+</resources>

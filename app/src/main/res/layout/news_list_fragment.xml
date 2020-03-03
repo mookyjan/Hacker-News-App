@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.mudassirkhan.hackernewsapp.ui.newsList.NewsListViewModel" />
+
+        <variable
+            name="onNewsItemCallback"
+            type="com.mudassirkhan.hackernewsapp.ui.adapter.TopNewsListAdapter.Callbacks" />
+
+    </data>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <com.facebook.shimmer.ShimmerFrameLayout
+           android:id="@+id/shimmer_view_container"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_gravity="center"
+           android:orientation="vertical"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           shimmer:duration="800">
+
+           <!-- Adding 7 rows of placeholders -->
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <include layout="@layout/data_placeholder_layout" />
+
+               <include layout="@layout/data_placeholder_layout" />
+
+               <include layout="@layout/data_placeholder_layout" />
+
+               <include layout="@layout/data_placeholder_layout" />
+
+               <include layout="@layout/data_placeholder_layout" />
+
+               <include layout="@layout/data_placeholder_layout" />
+
+               <include layout="@layout/data_placeholder_layout" />
+
+               <include layout="@layout/data_placeholder_layout" />
+           </LinearLayout>
+
+       </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity"
+        android:background="@color/colorBackground"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:orientation="vertical"
+            android:background="@color/colorYellow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    style="@style/BaseTextView.OpenSansBold"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:text="@string/txt_title_news_list"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_last_update"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_top_news"
+            newsListAdapter="@{viewModel.topNewsList}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:newsListCallbacks="@{onNewsItemCallback}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.674"
+            tools:listitem="@layout/data_placeholder_layout" />
+
+        <androidx.constraintlayout.widget.Guideline android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="@dimen/_8sdp"
+            android:id="@+id/left_guideline"
+            android:orientation="vertical"
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/right_guideline"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_8sdp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+   </RelativeLayout>
+
+</layout>

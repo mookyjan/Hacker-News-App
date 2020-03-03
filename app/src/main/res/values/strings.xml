@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Hacker News App</string>
+    <string name="txt_error">Unknown error</string>
+    <string name="txt_url">https://flif.info/</string>
+    <string name="txt_time">3h -doener</string>
+    <string name="title_activity_news_detail">NewsDetailActivity</string>
+    <string name="tab_text_1">Comments </string>
+    <string name="tab_text_2">Article</string>
+    <string name="txt_title_news_list">Top Stories</string>
+    <string name="txt_last_update">Last Update at</string>
+</resources>
