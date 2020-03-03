@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/newsListFragment"
+    >
+
+
+    <fragment
+        android:id="@+id/newsListFragment"
+        android:name="com.mudassirkhan.hackernewsapp.ui.newsList.NewsListFragment"
+        tools:layout="@layout/news_list_fragment">
+
+        <action
+            android:id="@+id/action_newsListFragment_to_newsDetailFragment"
+            app:destination="@+id/newsDetailFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.mudassirkhan.hackernewsapp.ui.news_detail.NewsDetailFragment"
+        tools:layout="@layout/news_detail_fragment">
+
+    </fragment>
+
+
+</navigation>
